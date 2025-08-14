@@ -44,7 +44,7 @@ const Home = () => {
     
 const handleProgressClick = (e) => {
     if (!audioRef.current || !duration) return;
-    // Always get the bounding rect of the bar, not the child
+   
     const bar = e.currentTarget;
     const rect = bar.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
@@ -54,7 +54,7 @@ const handleProgressClick = (e) => {
 
     const currentSong = songs.find(song => song._id === currentSongPlaying);
 
-    // Filtered songs based on search
+    
     const filteredSongs = songs.filter(song =>
         song.title.toLowerCase().includes(search.toLowerCase()) ||
         (song.artist && song.artist.toLowerCase().includes(search.toLowerCase()))
@@ -66,7 +66,7 @@ const handleProgressClick = (e) => {
                 Moments
             </h1>
 
-            {/* Search Bar */}
+            
             <div className="search-bar-container">
                 <input
                     type="text"
@@ -139,22 +139,21 @@ const handleProgressClick = (e) => {
                 ))}
             </div>
 
-            {/* Full-Screen Player */}
+          
             {showFullScreenPlayer && currentSong && (
                 <div className="fullscreen-player">
                     <button className="close-btn" onClick={() => setShowFullScreenPlayer(false)}>✕</button>
 
-                    {/* Song Details */}
                     <div className="song-details-top">
                         <h2>{currentSong.title}</h2>
                         <p>{currentSong.artist}</p>
                         <p>{currentSong.releaseDate}</p>
                     </div>
 
-                    {/* Big Cover Image */}
+                  
                     <img src={currentSong.coverImage} alt="cover" className="fullscreen-cover" />
 
-                    {/* Controller at Footer */}
+                   
                     <div className="fullscreen-controls">
                         <div className="progress-bar" onClick={handleProgressClick}>
                             <div className="progress" style={{ width: duration ? `${(currentTime / duration) * 100}%` : '0%' }} />
@@ -186,7 +185,7 @@ const handleProgressClick = (e) => {
                 </div>
             )}
 
-            {/* Song Controller Footer */}
+          
             {currentSong && (
                 <div 
                     className="song-controller-footer" 
@@ -272,7 +271,7 @@ const handleProgressClick = (e) => {
                 </div>
             )}
 
-            {/* Bottom Navigation */}
+          
             <nav className="bottom-nav">
                 <Link to="/" className="nav-item active">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

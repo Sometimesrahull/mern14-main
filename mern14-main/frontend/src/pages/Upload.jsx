@@ -8,8 +8,7 @@ const Upload = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Example: check for authentication (replace with your logic)
-  const isAuthenticated = true; // Replace with actual auth check
+  const isAuthenticated = true; 
 
   const handleFileChange = (e) => {
     setAudio(e.target.files[0]);
@@ -36,8 +35,7 @@ const Upload = () => {
       const response = await fetch("http://localhost:3000/rahul", {
         method: "POST",
         body: formData,
-        // If you need to send auth token:
-        // headers: { Authorization: `Bearer ${token}` }
+      
       });
 
       if (response.ok) {

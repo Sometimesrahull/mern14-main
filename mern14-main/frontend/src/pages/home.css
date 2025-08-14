@@ -3,7 +3,7 @@
   
     min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    padding-bottom: 70px; /* Height of the bottom nav */
+    padding-bottom: 70px;
 }
 
 .song-list {
@@ -116,7 +116,7 @@
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 60px; /* above nav */
+    bottom: 60px; 
    background: linear-gradient(to left, #15ed52,  #100f0f);
     color: #f6f2f2;
     display: flex;
@@ -174,14 +174,14 @@
     background: #030604;
     transition: width 0.2s;
 }
-/* Add to home.css */
+
 .controller-controls {
     align-items: center;
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 4px;
-    padding-left: 50px; /* Adjusted for better alignment */
+    padding-left: 50px; 
 }
 .controller-btn {
     background: none;
